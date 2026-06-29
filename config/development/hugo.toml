@@ -1,0 +1,4 @@
+# Development configuration. Disable this by running: hugo server -e production
+# https://gohugo.io/quick-reference/glossary/#environment
+
+baseURL = "http://localhost:1313"
