@@ -56,19 +56,19 @@ icacls D:\app\VBox /reset /t /c
 
 ### 1、新建虚拟电脑
 
-[image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627105021674.png)
+![image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627105021674.png)
 
 ### 2、配置硬件
 
-[image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627105124138.png)
+![image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627105124138.png)
 
 ### 3、创建虚拟硬盘
 
-[image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627105155640.png)
+![image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627105155640.png)
 
 ### 4、点击下一步，点击完成，创建成功
 
-[image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627105235695.png)
+![image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627105235695.png)
 
 ### 5、配置服务器
 
@@ -76,73 +76,73 @@ icacls D:\app\VBox /reset /t /c
 
 #### 5.1、选择系统，勾选启动顺序中的网络，然后点击光驱，点击右边的向上箭头将光驱放到第一位
 
-[image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627111356990.png)
+![image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627111356990.png)
 
 #### 5.2、选择网络，选择网卡2，点击启动网络连接，连接方式选择仅主机Host-only网络
 
 > 这一步如果没有显示其余网卡，则可以先跳过，等安装完系统之后关闭虚拟机，然后再次打开设置，就会显示其余网卡了
 
-[image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627111507975.png)
+![image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627111507975.png)
 
 > 注：网卡1也要已经启动网络连接，连接方式默认为网络地址转换NAT即可
 
 #### 5.3、点击右下角确定即配置完毕，配置完成之后的主界面往下滑动如下图
 
-[image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627111819220.png)
+![image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627111819220.png)
 
 > 注：马赛克是因为这个地方的教程是后续添加的，so ψ(._. )>
 
 ### 6、选中服务器，点击右上角启动，启动服务器(第一次需正常图形化界面启动)
 
-[image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627105855222.png)
+![image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627105855222.png)
 
 > 选择第一个，敲击回车
 
 ### 7、等待安装的过程，直到出现选择语言界面，如下图
 
-[image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627110120876.png)
+![image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627110120876.png)
 
 > 左边滑到最下面选择中文，右边选择简体中文，点击继续(可选，可以直接默认使用英文)
 
 ### 8、出现如下界面
 
-[image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627110325509.png)
+![image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627110325509.png)
 
 ### 9、配置键盘和语言支持(可选，增加英语键盘和语言)
 
-[image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627110625655.png)
+![image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627110625655.png)
 
 ### 10、配置系统安装位置
 
-[image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627110905248.png)
+![image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627110905248.png)
 
 > 选择本地标准磁盘，点击完成即可（外面不再显示黄色警告，如果还出现再次点进来选中再点击完成）
 
 ### 11、配置网络
 
-[image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627111052091.png)
+![image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627111052091.png)
 
 > 选择第一个网卡enp0s3，点击右边的关闭按钮变成打开，网络显示已连接即成功，点击完成
 
 ### 12、配置完成，点击开始安装
 
-[image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627111234695.png)
+![image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627111234695.png)
 
 ### 13、设置root密码(必须)，添加用户(可选)，等待安装
 
-[image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627112551175.png)
+![image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627112551175.png)
 
 ### 14、安装完成，点击重启
 
-[image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627113003973.png)
+![image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627113003973.png)
 
 ### 15、重启之后默认选择第一个进入即可，然后输入root和密码进行登录，如下图即成功
 
-[image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627113201065.png)
+![image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627113201065.png)
 
 ### 16、检查网卡配置和网络是否连接
 
-[image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627113402821.png)
+![image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627113402821.png)
 
 > 输入ip addr查看网卡，然后输入ping www.baidu.com查看能够连接外网(按ctrl+c终止)
 
@@ -152,23 +152,23 @@ icacls D:\app\VBox /reset /t /c
 
 ##### 17.1.1、右键电脑右下角wifi标志，点击打开网络设置
 
-[image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627114723088.png)
+![image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627114723088.png)
 
 ##### 17.1.2、选择更改适配器选项
 
-[image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627114834652.png)
+![image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627114834652.png)
 
 ##### 17.1.3、找到含有VirtualBox Host-Only Ethernet标志的网络，右键点击属性
 
-[image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627114934438.png)
+![image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627114934438.png)
 
 ##### 17.1.4、找到ipv4，点击右下方属性
 
-[image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627115055535.png)
+![image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627115055535.png)
 
 ##### 17.1.5、查看ip地址
 
-[image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627115146818.png)
+![image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627115146818.png)
 
 > 这里如果不是这样显示，配置成这样，然后点击确定
 
@@ -178,7 +178,7 @@ icacls D:\app\VBox /reset /t /c
 
 > ls /etc/sysconfig/network-scripts/
 
-[image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627115451891.png)
+![image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627115451891.png)
 
 ##### 17.2.2、编辑第二块网卡配置文件(即ifcfg-enp0s8，如果没有请先返回第5条配置服务器)
 
@@ -194,7 +194,7 @@ nmcli con add con-name enp0s8 type ethernet ifname enp0s8
 >
 > 编辑红框区域，如果没有就自己添加（vi编写文件，:wq保存退出）
 
-[image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627120450227.png)
+![image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627120450227.png)
 
 ##### 17.2.3、重启网络服务
 
@@ -202,19 +202,19 @@ nmcli con add con-name enp0s8 type ethernet ifname enp0s8
 
 #### 17.3、输入ip addr查看配置是否成功
 
-[image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627120901486.png)
+![image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627120901486.png)
 
 > 成功显示ip地址即为成功
 
 ### 18、配置xshell远程连接
 
-[image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627121042587.png)
+![image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627121042587.png)
 
-[image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627121219491.png)
+![image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627121219491.png)
 
 > 点击确定后会弹框，选择接受并保存即可，然后如下图显示就表示远程连接成功
 
-[image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627121323169.png)
+![image](https://raw.githubusercontent.com/AzurTian/ImgBed/master/learn/image-20230627121323169.png)
 
 ## 二、配置初始的centos7
 
