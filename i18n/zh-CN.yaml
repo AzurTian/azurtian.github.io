@@ -1,0 +1,8 @@
+busuanzi:
+  site_views: "浏览 {{ .Count }} 次"
+  site_views_title: "网站总浏览量"
+  site_visitors: "访客 {{ .Count }} 人"
+  site_visitors_title: "网站总访客数"
+  page_views_title: "本页浏览量"
+  page_visitors: "访客 {{ .Count }} 人"
+  page_visitors_title: "本页访客数"

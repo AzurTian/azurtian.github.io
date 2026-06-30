@@ -55,6 +55,15 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showAppearanceSwitcher = true
   showScrollToTop = true
 
+[busuanzi]
+  enable = true
+  script = "//cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js"
+
+[busuanzi.site]
+  enable = true
+  showViews = true
+  showVisitors = true
+
 [homepage]
   layout = "background" # valid options: page, profile, hero, card, background, custom
   homepageImage = "img/background.png" # used in: hero, and card
@@ -70,6 +79,9 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
 [article]
   showDate = true
   showViews = false
+  showBusuanzi = true
+  showBusuanziPageViews = true
+  showBusuanziPageVisitors = true
   showLikes = false
   showDateOnlyInArticle = true
   showDateUpdated = true

@@ -1,0 +1,38 @@
+{{ $enabled := false }}
+{{ if ne site.Params.article.showBusuanzi nil }}{{ $enabled = site.Params.article.showBusuanzi }}{{ end }}
+{{ if ne .Params.showBusuanzi nil }}{{ $enabled = .Params.showBusuanzi }}{{ end }}
+
+{{ $showViews := false }}
+{{ if ne site.Params.article.showBusuanziPageViews nil }}
+  {{ $showViews = site.Params.article.showBusuanziPageViews }}
+{{ end }}
+{{ if ne .Params.showBusuanziPageViews nil }}{{ $showViews = .Params.showBusuanziPageViews }}{{ end }}
+
+{{ $showVisitors := false }}
+{{ if ne site.Params.article.showBusuanziPageVisitors nil }}
+  {{ $showVisitors = site.Params.article.showBusuanziPageVisitors }}
+{{ end }}
+{{ if ne .Params.showBusuanziPageVisitors nil }}
+  {{ $showVisitors = .Params.showBusuanziPageVisitors }}
+{{ end }}
+
+{{ if and site.Params.busuanzi.enable $enabled (or $showViews $showVisitors) }}
+  {{ $pageViewsCount := `<span id="busuanzi_page_pv">0</span>` }}
+  {{ $pageVisitorsCount := `<span id="busuanzi_page_uv">0</span>` }}
+  <span>
+    {{ if $showViews }}
+      <span title="{{ i18n "busuanzi.page_views_title" }}">
+        {{ $pageViewsCount | safeHTML }}
+        <span class="inline-block align-text-bottom">{{ partial "icon.html" "eye" }}</span>
+      </span>
+    {{ end }}
+    {{ if and $showViews $showVisitors }}
+      <span class="px-1 text-primary-500">&middot;</span>
+    {{ end }}
+    {{ if $showVisitors }}
+      <span title="{{ i18n "busuanzi.page_visitors_title" }}">
+        {{ i18n "busuanzi.page_visitors" (dict "Count" $pageVisitorsCount) | safeHTML }}
+      </span>
+    {{ end }}
+  </span>
+{{ end }}
