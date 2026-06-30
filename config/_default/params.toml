@@ -68,7 +68,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   layout = "background" # valid options: page, profile, hero, card, background, custom
   homepageImage = "img/background.png" # used in: hero, and card
   showRecent = true
-  showRecentItems = 9
+  showRecentItems = 6
   showMoreLink = true
   showMoreLinkDest = "/docs/"
   cardView = true
@@ -77,7 +77,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   disableHeroImageFilter = false # only used when layout equals hero
 
 [article]
-  showDate = true
+  showDate = false
   showViews = false
   showBusuanzi = true
   showBusuanziPageViews = true

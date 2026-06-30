@@ -7,3 +7,6 @@ busuanzi:
   page_views_title: "本页浏览量"
   page_visitors: "访客 {{ .Count }} 人"
   page_visitors_title: "本页访客数"
+article:
+  zen_mode_title:
+    enable: "启用阅读模式"
