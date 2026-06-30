@@ -1,8 +1,9 @@
 busuanzi:
-  site_views: "Views {{ .Count }}"
+  site_views: "Site views {{ .Count }}"
   site_views_title: "Site page views"
-  site_visitors: "Visitors {{ .Count }}"
+  site_visitors: "Site visitors {{ .Count }}"
   site_visitors_title: "Site unique visitors"
+  page_views: "Views {{ .Count }}"
   page_views_title: "Page views"
   page_visitors: "Visitors {{ .Count }}"
   page_visitors_title: "Page unique visitors"

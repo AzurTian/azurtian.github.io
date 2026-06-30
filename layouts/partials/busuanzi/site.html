@@ -14,19 +14,22 @@
 {{ end }}
 
 {{ if and site.Params.busuanzi.enable $enabled (or $showViews $showVisitors) }}
-  {{ $siteViewsCount := `<span id="busuanzi_site_pv">0</span>` }}
-  {{ $siteVisitorsCount := `<span id="busuanzi_site_uv">0</span>` }}
-  <p class="mt-2 text-xs text-neutral-500 dark:text-neutral-400">
+  {{ $siteViewsCount := `<span id="busuanzi_site_pv"></span>` }}
+  {{ $siteVisitorsCount := `<span id="busuanzi_site_uv"></span>` }}
+  <p
+    data-busuanzi-group
+    data-busuanzi-hide-empty
+    class="hidden mt-2 text-xs text-neutral-500 dark:text-neutral-400">
     {{ if $showViews }}
-      <span title="{{ i18n "busuanzi.site_views_title" }}">
+      <span data-busuanzi-item class="hidden" title="{{ i18n "busuanzi.site_views_title" }}">
         {{ i18n "busuanzi.site_views" (dict "Count" $siteViewsCount) | safeHTML }}
       </span>
     {{ end }}
     {{ if and $showViews $showVisitors }}
-      <span class="px-1 text-primary-500">&middot;</span>
+      <span data-busuanzi-separator class="hidden px-1 text-primary-500">&middot;</span>
     {{ end }}
     {{ if $showVisitors }}
-      <span title="{{ i18n "busuanzi.site_visitors_title" }}">
+      <span data-busuanzi-item class="hidden" title="{{ i18n "busuanzi.site_visitors_title" }}">
         {{ i18n "busuanzi.site_visitors" (dict "Count" $siteVisitorsCount) | safeHTML }}
       </span>
     {{ end }}

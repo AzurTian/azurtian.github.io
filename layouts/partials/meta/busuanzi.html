@@ -17,20 +17,20 @@
 {{ end }}
 
 {{ if and site.Params.busuanzi.enable $enabled (or $showViews $showVisitors) }}
-  {{ $pageViewsCount := `<span id="busuanzi_page_pv">0</span>` }}
-  {{ $pageVisitorsCount := `<span id="busuanzi_page_uv">0</span>` }}
-  <span>
+  {{ $pageViewsCount := `<span id="busuanzi_page_pv"></span>` }}
+  {{ $pageVisitorsCount := `<span id="busuanzi_page_uv"></span>` }}
+  <span data-busuanzi-group data-busuanzi-meta class="hidden">
     {{ if $showViews }}
-      <span title="{{ i18n "busuanzi.page_views_title" }}">
-        {{ $pageViewsCount | safeHTML }}
+      <span data-busuanzi-item class="hidden" title="{{ i18n "busuanzi.page_views_title" }}">
+        {{ i18n "busuanzi.page_views" (dict "Count" $pageViewsCount) | safeHTML }}
         <span class="inline-block align-text-bottom">{{ partial "icon.html" "eye" }}</span>
       </span>
     {{ end }}
     {{ if and $showViews $showVisitors }}
-      <span class="px-1 text-primary-500">&middot;</span>
+      <span data-busuanzi-separator class="hidden px-1 text-primary-500">&middot;</span>
     {{ end }}
     {{ if $showVisitors }}
-      <span title="{{ i18n "busuanzi.page_visitors_title" }}">
+      <span data-busuanzi-item class="hidden" title="{{ i18n "busuanzi.page_visitors_title" }}">
         {{ i18n "busuanzi.page_visitors" (dict "Count" $pageVisitorsCount) | safeHTML }}
       </span>
     {{ end }}

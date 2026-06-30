@@ -1,0 +1,62 @@
+<script>
+  (function () {
+    if (window.__busuanziVisibilityInitialized) return;
+    window.__busuanziVisibilityInitialized = true;
+
+    const hasStatisticValue = (node) => {
+      return node && node.textContent.trim() !== "";
+    };
+
+    const setHidden = (node, hidden) => {
+      if (!node) return;
+      node.classList.toggle("hidden", hidden);
+    };
+
+    const updateGroup = (group) => {
+      const items = Array.from(group.querySelectorAll("[data-busuanzi-item]"));
+      const visibleItems = items.filter((item) => {
+        const valueNode = item.querySelector('[id^="busuanzi_"]');
+        const visible = hasStatisticValue(valueNode);
+        setHidden(item, !visible);
+        return visible;
+      });
+
+      group.querySelectorAll("[data-busuanzi-separator]").forEach((separator) => {
+        setHidden(separator, visibleItems.length < 2);
+      });
+
+      const groupVisible = visibleItems.length > 0;
+      if (group.hasAttribute("data-busuanzi-hide-empty") || group.hasAttribute("data-busuanzi-meta")) {
+        setHidden(group, !groupVisible);
+      }
+
+      if (group.hasAttribute("data-busuanzi-meta")) {
+        const metaSeparator = group.previousElementSibling;
+        if (metaSeparator && metaSeparator.hasAttribute("data-busuanzi-meta-separator")) {
+          setHidden(metaSeparator, !groupVisible);
+        }
+      }
+    };
+
+    const initBusuanziVisibility = () => {
+      document.querySelectorAll("[data-busuanzi-group]").forEach((group) => {
+        updateGroup(group);
+
+        group.querySelectorAll('[id^="busuanzi_"]').forEach((valueNode) => {
+          const observer = new MutationObserver(() => updateGroup(group));
+          observer.observe(valueNode, {
+            childList: true,
+            characterData: true,
+            subtree: true,
+          });
+        });
+      });
+    };
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initBusuanziVisibility);
+    } else {
+      initBusuanziVisibility();
+    }
+  })();
+</script>

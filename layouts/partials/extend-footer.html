@@ -1,1 +1,4 @@
 {{ partial "busuanzi/site.html" . }}
+{{ if site.Params.busuanzi.enable }}
+  {{ partial "busuanzi/visibility-script.html" . }}
+{{ end }}
